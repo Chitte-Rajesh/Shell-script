@@ -1,4 +1,4 @@
 #!bin/bash
 
 echo "All variables: $@"
-echo "total variables: $#"
+echo "Number of variables passed: $#"
