@@ -14,4 +14,3 @@ fi
 
 
 
-dnf install my mysql -y
