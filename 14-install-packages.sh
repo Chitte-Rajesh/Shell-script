@@ -19,7 +19,7 @@ else
 fi 
 }
 
-if [$USERID -NE 0]
+if [ $USERID -NE 0 ]
 then
     echo "Please run the script with root access."
     exit 1 #manually exit if error comes.
@@ -30,7 +30,7 @@ fi
 for i in $@
 do
   echo "package to install:$i"
-  dnf list installed $i &>>&LOGFILE
+  dnf list installed $i &>>$LOGFILE
 if [ $? -eq 0 ]
 then 
 echo -e "$i already installed...$Y SKIPPING $N"
